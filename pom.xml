@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -100,12 +99,12 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
-                                    <file>${project.build.directory}/dependency/activej-common-${core.artifact.version}-sources.jar</file>
+                                    <file>${project.build.directory}/dependency/${project.artifactId}-${core.artifact.version}-sources.jar</file>
                                     <type>jar</type>
                                     <classifier>sources</classifier>
                                 </artifact>
                                 <artifact>
-                                    <file>${project.build.directory}/dependency/activej-common-${core.artifact.version}-javadoc.jar</file>
+                                    <file>${project.build.directory}/dependency/${project.artifactId}-${core.artifact.version}-javadoc.jar</file>
                                     <type>jar</type>
                                     <classifier>javadoc</classifier>
                                 </artifact>
@@ -135,11 +134,11 @@
                                         <artifactId>activej-types</artifactId>
                                         <version>${core.artifact.version}</version>
                                     </artifact>
-                                   <moduleInfo>
-										<name>dev.ikm.jpms.activej.types</name>
-										<open>true</open>
-										<exports>*;</exports>
-									</moduleInfo>
+                                   <moduleInfoSource>
+										module dev.ikm.jpms.activej.types {
+											requires transitive org.slf4j;
+										}
+									</moduleInfoSource>
                                 </module>
                             </modules>
                         </configuration>
@@ -184,7 +183,7 @@
                         <configuration>
                             <target>
                                 <echo message="unzipping files" />
-                                <unzip src="${project.build.directory}/moditect/activej-common-${core.artifact.version}.jar"
+                                <unzip src="${project.build.directory}/moditect/${project.artifactId}-${core.artifact.version}.jar"
                                        dest="${project.build.directory}/classes/" />
                             </target>
                         </configuration>

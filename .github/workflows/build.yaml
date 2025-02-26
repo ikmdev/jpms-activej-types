@@ -24,7 +24,7 @@ jobs:
       # - name: Pull Request Version Validation
       #   uses: ikmdev/maven-pull-request-version-validation-action@v1.0.0
 
-      - uses: actions/checkout@v4
+       - uses: actions/checkout@v4
 
        - name: Test
          run: |

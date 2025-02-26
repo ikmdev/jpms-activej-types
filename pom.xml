@@ -142,6 +142,8 @@
                                    <moduleInfoSource>
 										module dev.ikm.jpms.activej.types {
 											requires transitive org.slf4j;
+                                            exports io.activej.types;
+                                            exports io.activej.types.scanner;
 										}
 									</moduleInfoSource>
                                 </module>

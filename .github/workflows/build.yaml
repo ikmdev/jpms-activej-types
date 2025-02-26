@@ -19,18 +19,11 @@ jobs:
   pr-verification:
     name: Pull Request Validation
     runs-on: ubuntu-24.04
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'pull_request'
     steps:
-      # - name: Pull Request Version Validation
-      #   uses: ikmdev/maven-pull-request-version-validation-action@v1.0.0
+      - name: Pull Request Version Validation
+        uses: ikmdev/maven-pull-request-version-validation-action@v1.0.0
 
-       - uses: actions/checkout@v4
-
-       - name: Test
-         run: |
-           mvn clean install
-           cd target/classes
-           cat module-info.class
         
   general-build-job:
     name: General Build

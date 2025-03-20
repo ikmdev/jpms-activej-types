@@ -23,7 +23,7 @@ Add the following dependency to your pom.xml:
 
 Add the following dependency to your build.gradle:
 ```groovy
-implementation 'dev.ikm.jpms:antlr4-runtime:${latest-jpms-activej-types-version}'
+implementation 'dev.ikm.jpms:activej-typese:${latest-jpms-activej-types-version}'
 ```
 
 In your module descriptor (module-info.java), declare the dependency on the jpms-activej-types module:

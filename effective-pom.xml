@@ -56,7 +56,7 @@
   </issueManagement>
   <properties>
     <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
-    <core.artifact.release>r2</core.artifact.release>
+    <core.artifact.release>r3</core.artifact.release>
     <core.artifact.version>6.0-rc2</core.artifact.version>
     <java.version>23</java.version>
     <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
